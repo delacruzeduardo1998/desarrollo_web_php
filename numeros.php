@@ -4,6 +4,10 @@ switch ($_POST["acc"]) {
         $num=$_POST["num_perfecto"];
         num_perfect1($num);
         break;
+    case "num_abundante":
+        $num=$_POST["num_abundant"];
+        num_abundante($num);
+        break;
     default:
         echo("Datos invalidos!!");         
         break;

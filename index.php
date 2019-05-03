@@ -98,6 +98,14 @@
 					</div>
 				</div>
 
+				<div id="num_abundante" class="num_abundante">
+					<div class="input-group mb-3">
+					<input id="num_abundant" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<input class="btn btn-outline-secondary" value="verificar" onclick="accion1('num_abundante')" type="button"/>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			</section>
@@ -127,6 +135,7 @@
 										<li><a onclick="mostrar('primo_primo')">Primo sin primos</a></li>
 										<hr width=100%  align="right"  size=10  noshade="noshade">
 										<li><a onclick="mostrar('num_perfect1')">número perfecto</a></li>
+										<li><a onclick="mostrar('num_abundante')">número abundante</a></li>
 
 									</ul>
 								</nav>

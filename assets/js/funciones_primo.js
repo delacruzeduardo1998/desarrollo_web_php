@@ -18,7 +18,8 @@ function ocultar(){
     'rangos',
     'primo_distancia_abajo_arriba',
     'formula','criba','primo_primo',
-    'num_perfect1'
+    'num_perfect1',
+    'num_abundante'
     
     ];
     lista.forEach(i => {
@@ -32,7 +33,8 @@ function mostrar(div_id){
     'rangos',
     'primo_distancia_abajo_arriba',
     'formula','criba','primo_primo',
-    'num_perfect1'
+    'num_perfect1',
+    'num_abundante'
     
     ];    
     switch (div_id) {
@@ -59,6 +61,9 @@ function mostrar(div_id){
             break;
         case "num_perfect1":
             ocultt(lista,'num_perfect1');            
+            break;
+        case "num_abundante":
+            ocultt(lista,'num_abundante');
             break;
         default:
             alert("datos incorrectos!!");         
@@ -103,6 +108,7 @@ function accion1(accionn)
 {
 var param={
     num_perfecto: document.getElementById("num_perfectoo").value,
+    num_abundant: document.getElementById("num_abundant").value,
     acc: accionn
 };
     $.ajax({
