@@ -3,7 +3,11 @@
 switch ($_POST["acc"]) {
     case "primo":
         $numero=$_POST["numero_prim"];
-        ver_primoo($numero);
+        if($numero==1){
+            echo("no es primo");
+        }else {
+            ver_primoo($numero);
+        }
         break;
     case "apartir_n_mostrar_n":
         $num1=$_POST["desde"];

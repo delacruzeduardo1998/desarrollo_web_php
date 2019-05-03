@@ -1,5 +1,11 @@
 <?php
-
+switch ($_POST["acc"]) {
+    case "num_perfect":
+        echo("ssss");
+    default:
+        echo("Datos invalidos!!");         
+        break;
+}
 #recibe un numero si la suma de sus divisores es igual a el numero
 
 function num_perfect1($num){
@@ -10,8 +16,10 @@ function num_perfect1($num){
         }
     }
     if($total==$num){
-        echo("numero perfecto");
+        echo("número perfecto");
         return true;
+    }else {
+        echo("no es un número perfecto");
     }
 }
 function num_perfect2($num){

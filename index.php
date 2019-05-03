@@ -15,118 +15,6 @@
 		left: 700px;
 		top:  100px;} 
 		</style>
-		<script type="text/javascript">
-			
-			function ocultar(){
-				document.getElementById('ver_primo').style.display = "none";            
-				document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-				document.getElementById('rangos').style.display = "none";  
-				document.getElementById('primo_distancia_abajo_arriba').style.display = "none";
-				document.getElementById('formula').style.display = "none"; 
-				document.getElementById('criba').style.display = "none"; 	
-				document.getElementById('primo_primo').style.display = "none"; 
-			}
-			window.onload = ocultar;
-			function mostrar(div_id){
-			switch (div_id) {
-				case 'ver_primo':
-					document.getElementById('ver_primo').style.display = "block";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none";
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "none"; 
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case 'apartir_n_mostrar_n':
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "block";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none";
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "none"; 
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case 'rangos':
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "block";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none"; 
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "none"; 
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case 'primo_distancia_abajo_arriba':
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "block"; 
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "none"; 
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case "formula":
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none"; 
-					document.getElementById('formula').style.display = "block"; 
-					document.getElementById('criba').style.display = "none"; 
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case "criba":
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none"; 
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "block";
-					document.getElementById('primo_primo').style.display = "none"; 
-					break;
-				case "primo_primo":
-					document.getElementById('ver_primo').style.display = "none";            
-					document.getElementById('apartir_n_mostrar_n').style.display = "none";              
-					document.getElementById('rangos').style.display = "none";  
-					document.getElementById('primo_distancia_abajo_arriba').style.display = "none"; 
-					document.getElementById('formula').style.display = "none"; 
-					document.getElementById('criba').style.display = "none";
-					document.getElementById('primo_primo').style.display = "block"; 
-					break;
-				default:
-					alert("datos incorrectos!!");         
-					break;
-				}
-			}
-			function accion(accionn)
-			{
-			var param={
-				numero_prim: document.getElementById("numero").value,
-				desde: document.getElementById("numero2").value,
-				hasta: document.getElementById("numero3").value,
-				menor: document.getElementById("menor").value,
-				mayor: document.getElementById("mayor").value,
-				combox_numero: document.getElementById("combox_numero").value,
-				combox_distancia: document.getElementById("combox_distancia").value,
-				combox: document.getElementById("combox").value,
-				x: document.getElementById("x").value,
-				num_criba: document.getElementById("num_criba").value,
-				num_primo_primo: document.getElementById("num_primo_primo").value,
-				acc: accionn
-			};
-				$.ajax({
-					method:"post", //aqui puede ser igual get
-					url: "primo.php",//aqui va tu direccion donde esta tu funcion php
-					data: param,//aqui tus datos
-					success:function(data){
-					alert(data);
-				},
-				error:function(data){
-					alert(data);
-					//lo que devuelve si falla tu archivo mifuncion.php
-				}
-				});
-			}
-			</script>
 	</head>
 	<body class="is-preload">
 
@@ -227,6 +115,9 @@
 										<li><a onclick="mostrar('formula')">Formula</a></li>
 										<li><a onclick="mostrar('criba')">criba</a></li>
 										<li><a onclick="mostrar('primo_primo')">Primo sin primos</a></li>
+										<hr width=100%  align="right"  size=10  noshade="noshade">
+										<li><a onclick="mostrar('num_perfect1')">número perfecto</a></li>
+
 									</ul>
 								</nav>
 
@@ -242,6 +133,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/funciones_primo.js"></script>
 
 	</body>
 </html>
