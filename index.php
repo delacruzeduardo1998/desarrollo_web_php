@@ -88,6 +88,16 @@
 						</div>
 					</div>
 				</div>
+
+				<div id="num_perfect1" class="num_perfect1">
+					<div class="input-group mb-3">
+					<input id="num_perfectoo" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<input class="btn btn-outline-secondary" value="verificar" onclick="accion1('num_perfect')" type="button"/>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			</section>

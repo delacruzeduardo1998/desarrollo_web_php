@@ -1,7 +1,9 @@
 <?php
 switch ($_POST["acc"]) {
     case "num_perfect":
-        echo("ssss");
+        $num=$_POST["num_perfecto"];
+        num_perfect1($num);
+        break;
     default:
         echo("Datos invalidos!!");         
         break;

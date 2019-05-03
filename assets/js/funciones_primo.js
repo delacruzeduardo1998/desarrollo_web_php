@@ -79,11 +79,35 @@ var param={
     x: document.getElementById("x").value,
     num_criba: document.getElementById("num_criba").value,
     num_primo_primo: document.getElementById("num_primo_primo").value,
+    num_perfect1: document.getElementById("num_perfect1").value,
     acc: accionn
 };
     $.ajax({
         method:"post", //aqui puede ser igual get
         url: "primo.php",//aqui va tu direccion donde esta tu funcion php
+        data: param,//aqui tus datos
+        success:function(data){
+        if(data==false){
+            alert("Datos incorrectos");
+        }else{
+            alert(data);
+        }
+    },
+    error:function(data){
+        
+        //lo que devuelve si falla tu archivo mifuncion.php
+    }
+    });
+}
+function accion1(accionn)
+{
+var param={
+    num_perfecto: document.getElementById("num_perfectoo").value,
+    acc: accionn
+};
+    $.ajax({
+        method:"post", //aqui puede ser igual get
+        url: "numeros.php",//aqui va tu direccion donde esta tu funcion php
         data: param,//aqui tus datos
         success:function(data){
         if(data==false){
