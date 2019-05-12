@@ -8,8 +8,37 @@ switch ($_POST["acc"]) {
         $num=$_POST["num_abundant"];
         num_abundante($num);
         break;
+    case "num_amigos":
+        $amigo1=$_POST["num_amigo1"];
+        $amigo2=$_POST["num_amigo2"];
+        num_amigos($amigo1,$amigo2);
+        break;
+    case "num_deficiente":
+        $num=$_POST["num_deficiente"];
+        num_deficiente($num);
+        break;
+    case "num_curioso":
+        $num=$_POST["num_curioso"];
+        num_curioso($num);
+        break;
+    case "num_malvado":
+        $num=$_POST["num_malvado"];
+        num_malvado($num);
+        break;
+    case "num_palindromo":
+        $num=$_POST["num_palindromo"];
+        num_palindromo($num);
+        break;
+    case "num_semiperfecto":
+        $num=$_POST["num_semiperfecto"];
+        num_semiperfecto($num);
+        break;
+    case "num_odioso":
+        $num=$_POST["num_odioso"];
+        num_odioso($num);
+        break;
     default:
-        echo("Datos invalidos!!");         
+        echo("Datos invalidos!! php");         
         break;
 }
 #recibe un numero si la suma de sus divisores es igual a el numero
@@ -35,9 +64,7 @@ function num_perfect2($num){
             $total=$total+$i;
         }
     }
-    if($total==$num){
-        echo("numero perfecto");
-    }
+   
     return $total;
 }
 
@@ -54,17 +81,27 @@ function num_abundante($num){
     }
     
 }
+function num_abundante2($num){
+    $a=num_perfect2($num);
+    if($a>$num){
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+}
 #num amigo
 # recibe dos numero la suma de divisores de uno es el otro numero
 function num_amigos($num1,$num2){
     $a=num_perfect2($num1);
     $b=num_perfect2($num2);
     if($a==$num2 and $b==$num1){
-        echo("amigo");
+        echo("amigos");
         return true;
     }
     else {
-        echo("no es amigo");
+        echo("no es amigos");
         return false;
     }
     
@@ -72,13 +109,13 @@ function num_amigos($num1,$num2){
 #numero deficiente
 #recibe un numero si la suma de sus divisores es menor a el
 function num_deficiente($num){
-    $val=num_abundante($num);
+    $val=num_abundante2($num);
     if($val){
-        echo("no lo es");
+        echo(" es un número deficiente");
         return false;
     }
     else {
-        echo("lo es");
+        echo("es un número deficiente");
         return true;
     }
 }
@@ -90,10 +127,10 @@ function num_curioso($num){
     
     $val=strripos($b, $a);
     if($val != 0){
-        echo("numero curioso");
+        echo($a." numero curioso ".strval($b));
         return(true);
     }else {
-        echo("numero no curioso");
+        echo($a." numero no curioso ".strval($b));
         return(false);
     }
 }
@@ -104,10 +141,10 @@ function num_curioso($num){
 function num_malvado($num){
     $bin = decbin($num);    
     if(strstr($bin,'11')){
-        echo("es malvado");
+        echo($bin." es malvado");
         return true;
     }else {
-        echo("no es malvado");
+        echo($bin." no es malvado");
         return false;
     }
 }
@@ -119,11 +156,11 @@ function num_palindromo($num){
 
     for($i=0;$i<strlen($cad0);$i++){
         if($cad0[$i] != $cad1[$i]){
-            echo("no es pali");
+            echo($cad0." no es palindromo");
             return false;
         }
     }
-    echo("es pali");
+    echo($cad0." es palindromo");
     return true;
 }
 # es un numero que o es perfecto pero que la suma de algunos de sus divisores es igual a el mismo
@@ -137,12 +174,12 @@ function num_semiperfecto($num){
             echo($total);
             $total=$total+$i;
             if($total == $num){
-                echo("numero semiperfect");
+                echo($num." numero semiperfect");
                 return true;
             }
         }
     }
-    echo("numero perfecto o abundante");
+    echo($num." numero perfecto o abundante");
     return false;
 }
 #en binario tiene un numero impar de unos
@@ -158,10 +195,10 @@ function num_odioso($num){
         }
     }
     if($total%2==1){
-        echo("numero odioso");
+        echo($num." numero odioso");
         return true;
     }else {
-        echo("numero no odioso");
+        echo($num." numero no odioso");
         return false;
     }
 }
@@ -169,11 +206,27 @@ function num_odioso($num){
 #si se suma los cuadrados de sus digitos y continuamos iterativamente este proceso
 #llegamos como resultado al uno
 #203 numero feliz
-function num_feliz($num){
-
-}
-function num_infeliz($num){
-
+function num_feliz ($num){
+	$cad=strval($num);
+	$suma=0;
+	while (strlen($cad)>1){
+		$suma=0;
+		for ($i = 0; $i < strlen($cad); $i++){
+			$st=$cad[$i];
+			$ent=intval($st);
+			$cuad=$ent*$ent;
+			$suma=$suma+$cuad;
+		}		
+		$cad=strval($suma);
+	}
+	if ($cad=="1"){
+		echo $num," Es feliz";
+	}
+	else{
+		echo $num,"Es infeliz";
+	}
+	
+	
 }
 
 #igual al del amigo pero mas de dos

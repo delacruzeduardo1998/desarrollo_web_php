@@ -106,9 +106,10 @@
 						</div>
 					</div>
 				</div>
+
+				
 			</div>
 
-			</section>
 
 			<aside>
 				<div class="inner">
@@ -133,10 +134,7 @@
 										<li><a onclick="mostrar('formula')">Formula</a></li>
 										<li><a onclick="mostrar('criba')">criba</a></li>
 										<li><a onclick="mostrar('primo_primo')">Primo sin primos</a></li>
-										<hr width=100%  align="right"  size=10  noshade="noshade">
-										<li><a onclick="mostrar('num_perfect1')">número perfecto</a></li>
-										<li><a onclick="mostrar('num_abundante')">número abundante</a></li>
-
+									
 									</ul>
 								</nav>
 

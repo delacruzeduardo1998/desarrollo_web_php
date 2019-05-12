@@ -17,10 +17,9 @@ function ocultar(){
     'apartir_n_mostrar_n',
     'rangos',
     'primo_distancia_abajo_arriba',
-    'formula','criba','primo_primo',
-    'num_perfect1',
-    'num_abundante'
-    
+    'formula',
+    'criba',
+    'primo_primo'  
     ];
     lista.forEach(i => {
         document.getElementById(i).style.display = "none";              
@@ -32,10 +31,9 @@ function mostrar(div_id){
     'apartir_n_mostrar_n',
     'rangos',
     'primo_distancia_abajo_arriba',
-    'formula','criba','primo_primo',
-    'num_perfect1',
-    'num_abundante'
-    
+    'formula',
+    'criba',
+    'primo_primo'  
     ];    
     switch (div_id) {
         case 'ver_primo':
@@ -50,21 +48,16 @@ function mostrar(div_id){
         case 'primo_distancia_abajo_arriba':
             ocultt(lista,'primo_distancia_abajo_arriba');
             break;
-        case "formula":
+        case 'formula':
             ocultt(lista,'formula');
             break;
-        case "criba":
+        case 'criba':
             ocultt(lista,'criba');            
             break;
-        case "primo_primo":
+        case 'primo_primo':
             ocultt(lista,'primo_primo');            
             break;
-        case "num_perfect1":
-            ocultt(lista,'num_perfect1');            
-            break;
-        case "num_abundante":
-            ocultt(lista,'num_abundante');
-            break;
+
         default:
             alert("datos incorrectos!!");         
             break;
@@ -84,36 +77,11 @@ var param={
     x: document.getElementById("x").value,
     num_criba: document.getElementById("num_criba").value,
     num_primo_primo: document.getElementById("num_primo_primo").value,
-    num_perfect1: document.getElementById("num_perfect1").value,
     acc: accionn
 };
     $.ajax({
         method:"post", //aqui puede ser igual get
         url: "primo.php",//aqui va tu direccion donde esta tu funcion php
-        data: param,//aqui tus datos
-        success:function(data){
-        if(data==false){
-            alert("Datos incorrectos");
-        }else{
-            alert(data);
-        }
-    },
-    error:function(data){
-        
-        //lo que devuelve si falla tu archivo mifuncion.php
-    }
-    });
-}
-function accion1(accionn)
-{
-var param={
-    num_perfecto: document.getElementById("num_perfectoo").value,
-    num_abundant: document.getElementById("num_abundant").value,
-    acc: accionn
-};
-    $.ajax({
-        method:"post", //aqui puede ser igual get
-        url: "numeros.php",//aqui va tu direccion donde esta tu funcion php
         data: param,//aqui tus datos
         success:function(data){
         if(data==false){
