@@ -84,33 +84,11 @@
 					<div class="input-group mb-3">
 					<input id="num_primo_primo" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
-							<input class="btn btn-outline-secondary" value="verificar" onclick="accion('primo_primo')" type="button"/>
+							<input class="btn btn-outline-secondary" value="verificar" onclic="accion('primo_primo')" type="button"/>
 						</div>
 					</div>
-				</div>
-
-				<div id="num_perfect1" class="num_perfect1">
-					<div class="input-group mb-3">
-					<input id="num_perfectoo" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
-						<div class="input-group-append">
-							<input class="btn btn-outline-secondary" value="verificar" onclick="accion1('num_perfect')" type="button"/>
-						</div>
-					</div>
-				</div>
-
-				<div id="num_abundante" class="num_abundante">
-					<div class="input-group mb-3">
-					<input id="num_abundant" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
-						<div class="input-group-append">
-							<input class="btn btn-outline-secondary" value="verificar" onclick="accion1('num_abundante')" type="button"/>
-						</div>
-					</div>
-				</div>
-
-				
+				</div>				
 			</div>
-
-
 			<aside>
 				<div class="inner">
 					<div id="sidebar">
@@ -134,6 +112,8 @@
 										<li><a onclick="mostrar('formula')">Formula</a></li>
 										<li><a onclick="mostrar('criba')">criba</a></li>
 										<li><a onclick="mostrar('primo_primo')">Primo sin primos</a></li>
+										<li><a href="indexx.php">Números</a></li>
+										<li><a href="parejas.php">Buscar pareja</a></li>
 									
 									</ul>
 								</nav>

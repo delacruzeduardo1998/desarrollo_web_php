@@ -135,6 +135,9 @@
 										<li><a onclick="mostrar('num_palindromo')">números palindromo</a></li>
 										<li><a onclick="mostrar('num_semiperfecto')">números semiperfecto</a></li>
 										<li><a onclick="mostrar('num_odioso')">números odioso</a></li>
+										
+										<li><a href="index.php">primos</a></li>
+
 
 									</ul>
 								</nav>
