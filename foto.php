@@ -10,8 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--link rel="stylesheet" href="assets/css/bootstrap.min.css"/-->
-
 		<style type="text/css"> 
 		#registrar{ position:absolute; z-index:1;
 		left: 500px;
@@ -19,20 +17,14 @@
 
 		#buscar{ position:absolute; z-index:1;
 		left: 500px;
-		top:  100px;} 
-		#ver_persona{ position:absolute; z-index:1;
-		left: 500px;
 		top:  100px;}
-		
-		#ver_perfil{ position:absolute; z-index:1;
+        #foto{ position:absolute; z-index:1;
 		left: 500px;
-		top:  100px;}
-		
-		
-		
+		top:  100px;}  
 		</style>
 	</head>
 	<body class="is-preload">
+
 		<!-- Wrapper -->
 			<div id="registrar">
 				<div class="input-group mb-3">
@@ -87,7 +79,7 @@
 					<label for="obsesivas">Obsesiv@</label>
 				</div>
 				<div class="col-12">
-					<label for="pasatiempo"><h3 id="elements">Pasatiempos</h3></label>
+					<label for="pasatiempo">Pasatiempos</label>
 					<select name="pasatiempo" id="pasatiempo">
 						<option value="video_juegos">Jugar videojuegos</option>
 						<option value="rompecabezas">Rompecabezas</option>
@@ -99,7 +91,7 @@
 				
 				<label for="#"></label>
 				<div class="input-group-append">
-					<input class="btn btn-outline-secondary" value="guardar" onclick="accion('registra')" type="button"/>
+					<input class="btn btn-outline-secondary" value="verificar" onclick="accion('registra')" type="button"/>
 				</div>
 			</div>
 
@@ -194,7 +186,7 @@
 					<label for="bus_obsesivas">Obsesiv@</label>
 				</div>
 				<div class="col-12">
-					<label for="pasatiempo"><h3 id="elements">Pasatiempos</h3></label>
+					<label for="pasatiempo">Pasatiempos</label>
 					<select name="bus_pasatiempo" id="bus_pasatiempo">
 						<option value="video_juegos">Jugar videojuegos</option>
 						<option value="rompecabezas">Rompecabezas</option>
@@ -203,75 +195,20 @@
 						<option value="bailar">Bailar</option>
 					</select>
 				</div>
-				<div class="input-group-append">
-					<label for="#"></label>
-					<input class="btn btn-outline-secondary" value="buscar" onclick="buscar('buscar')" type="button"/>
-				</div>
+				<label for="#"></label>
 			</div>
-			<div id="ver_persona">
-				<div class="table-wrapper">
-					<table class="alt">
-						<thead>
-							<tr>
-								<th>Nombre</th>
-								<th>Edad</th>
-								<th>Sexo</th>
-								<th>Porcentaje de igualdad</th>
-								<th>Ver perfil</th>
-							</tr>
-						</thead>
-						<tbody id="filas_tabla">
-							
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="ver_perfil">
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Nombre</h3></label>
-					<label id="elemento_nombre"></label>
-				</div>	
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Edad</h3></label>
-					<label id="elemento_edad"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Sexo</h3></label>
-					<label id="elemento_sexo"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Color de ojos</h3></label>
-					<label id="elemento_color_ojos"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Peso</h3></label>
-					<label id="elemento_peso"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Estatura</h3></label>
-					<label id="elemento_estatura"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">caracteristicas</h3></label>
-					<label id="elemento_caracteristicas">Ninguna</label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Pasatiempos</h3></label>
-					<label id="elemento_pasatiempos"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Porcentaje de igualdad</h3></label>
-					<label id="elemento_porcentaje"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements"></h3></label>
-					<label id="elemento_foto"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label for="#"></label>
-					<input class="btn btn-outline-secondary" value="regresar" onclick="regresar()" type="button"/>
-				</div>
-			</div>
+			<div id="foto">
+                            
+                <form action='foto_log.php' method='post' enctype='multipart/form-data'>
+                <label for='file'>Seleccione su foto:</label>
+                <input type='file' name='file' onchange="previewFile()"/>
+                <img src="" height="200" alt="Imagen view">
+				<label for="#"></label>
+                <input type='submit' name='submit' value='Submit' />
+                </form>
+
+
+            </div>
 			<aside>
 				<div class="inner">
 					<div id="sidebar">
@@ -307,8 +244,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-    		<script src="assets/js/popper.min.js"></script>
-    		<script src="assets/js/bootstrap.min.js"></script>
 			<script src="assets/js/funciones_parejas.js?v=<?php echo time();?>"></script>
 	</body>
 </html>
