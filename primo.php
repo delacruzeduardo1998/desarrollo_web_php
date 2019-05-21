@@ -170,18 +170,22 @@ function criba($num){
         $ii++; 
     }
     foreach($lista2 as $list){
-        echo($list);
+        if($list==4 || $list==6 || $list==8 || $list==10){
+            echo("0");
+        }else {
+            echo($list);            
+        }
         echo(",");
     }
 }
 
 function primo_primo($num){
-   
     for($i=2;$i<$num;$i++){
         $ver=ver_primo($i);
         if($ver){
             if($num%$i==0){
-                echo("no es primo primo");
+
+                echo("no es primo primo, lo divide el ".strval($i));
                 return false;
             }
             else{
@@ -190,4 +194,5 @@ function primo_primo($num){
         }
     } 
     echo("es primo primo");
+
 }

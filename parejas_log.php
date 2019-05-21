@@ -164,8 +164,10 @@ function buscar($sexo,$edad_min,$edad_max,$color_ojos,$peso_min,$peso_max,$estat
           }
           $ponde=0;
     }
+    $b=0;
     for($i=0;$i<=sizeof($todos_ponderados)-1;$i++){
-        echo('
+        if($sexo == $todos_ponderados[$i]['sexo']){
+            echo('
             <tr>
             <td>'.$todos_ponderados[$i]['nombre'].'</td>
             <td>'.$todos_ponderados[$i]['edad'].'</td>
@@ -175,11 +177,11 @@ function buscar($sexo,$edad_min,$edad_max,$color_ojos,$peso_min,$peso_max,$estat
                 <div class="input-group-append">
                     <input class="btn btn-outline-secondary" href="#" value="perfil completo" onclick="ver_perfil_t(
                         \''.$todos_ponderados[$i]['nombre'].'\',
-                        \''.$todos_ponderados[$i]['edad'].'\',
+                        \''.$todos_ponderados[$i]['edad'].' años\',
                         \''.$todos_ponderados[$i]['sexo'].'\',
                         \''.$todos_ponderados[$i]['color_ojos'].'\',
-                        \''.$todos_ponderados[$i]['peso'].'\',
-                        \''.$todos_ponderados[$i]['estatura'].'\',
+                        \''.$todos_ponderados[$i]['peso'].' Kg\',
+                        \''.$todos_ponderados[$i]['estatura'].' cm\',
                         \''.$todos_ponderados[$i]['optimista'].'\',
                         \''.$todos_ponderados[$i]['introvertidas'].'\',
                         \''.$todos_ponderados[$i]['extravertidas'].'\',
@@ -193,6 +195,17 @@ function buscar($sexo,$edad_min,$edad_max,$color_ojos,$peso_min,$peso_max,$estat
             </td>
             </tr>
         ');
+        $b=1;
+        }
+    }
+    if($b==0){
+        echo('<tr>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        </tr>');
     }
 }
 function registrar($nombre,$edad,$sexo,$color_ojos,$peso,$estatura,$optimista,$introvertidas,$extravertidas,$rebeldes,$obsesivas,$pasatiempo,$foto){
@@ -203,7 +216,7 @@ function registrar($nombre,$edad,$sexo,$color_ojos,$peso,$estatura,$optimista,$i
    
     $sql="
     INSERT INTO `persona`(`nombre`, `edad`, `sexo`, `color_ojos`, `peso`, `estatura`, `optimista`, `introvertidas`, `extravertidas`, `rebeldes`, `obsesivas`, `pasatiempo`, `foto`) 
-    VALUES ('".$nombre."',".$edad.",'".$sexo."','".$color_ojos."',".$peso.",".$estatura.",'".$optimista."','".$introvertidas."','".$extravertidas."','".$rebeldes."','".$obsesivas."','".$pasatiempo."','".$foto."')
+    VALUES ('".$nombre."',".$edad.",'".$sexo."','".$color_ojos."',".$peso.",".$estatura.",'".$optimista."','".$introvertidas."','".$extravertidas."','".$rebeldes."','".$obsesivas."','".$pasatiempo."','1')
     ";
     mysqli_query($bd,$sql);
     echo("Guardado con exito");

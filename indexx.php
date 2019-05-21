@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style type="text/css"> 
 		#capa1{ position:absolute; z-index:1;
-		left: 700px;
+		left: 400px;
 		top:  100px;} 
 		</style>
 	</head>
@@ -23,6 +23,7 @@
         <div id="capa1">
 				<div id="num_perfect1" class="num_perfect1">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>la suma de sus divisores es igual a el mismo</h3></label>
 					<input id="num_perfectoo" type="text" class="form-control" placeholder="número1" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar" onclick="accion('num_perfect')"  type="button"/>
@@ -32,6 +33,7 @@
 
 				<div id="num_abundante" class="num_abundante">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>la suma de sus divisores es mayor a el mismo</h3></label>
 					<input id="num_abundant" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_abundante')" type="button"/>
@@ -41,6 +43,7 @@
 
                 <div id="num_amigos" class="num_amigos">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>la suma de sus divisores es igual a el otro numero</h3></label>
 					<input id="num_amigo1" type="text" class="form-control" placeholder="número 1" aria-label="Recipient's username" aria-describedby="basic-addon2">
 					<input id="num_amigo2" type="text" class="form-control" placeholder="número 2" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
@@ -52,6 +55,7 @@
 
                 <div id="num_deficiente" class="num_deficiente">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>la suma de sus divisores es menor a el mismo</h3></label>
 					<input id="num_deficient" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_deficiente')" type="button"/>
@@ -62,6 +66,8 @@
 
                 <div id="num_curioso" class="num_curioso">
 					<div class="input-group mb-3">
+					
+					<label for="numero"><h3>el numero al cuadrado tiene como ultima sifra al propio número</h3></label>
 					<input id="num_curios" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_curioso')" type="button"/>
@@ -72,6 +78,7 @@
 
                 <div id="num_malvado" class="num_malvado">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>En binario contiene al menos un par de unos consecutivos</h3></label>
 					<input id="num_mal" type="text" class="form-control" placeholder="número evil" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_malvado')" type="button"/>
@@ -81,6 +88,7 @@
 
                 <div id="num_palindromo" class="num_palindromo">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>En binario es un palindromo</h3></label>					
 					<input id="num_pali" type="text" class="form-control" placeholder="número palin" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_palindromo')" type="button"/>
@@ -91,6 +99,7 @@
 
                 <div id="num_semiperfecto" class="num_semiperfecto">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>La suma de algunos de sus divisores es igual a el</h3></label>					
 					<input id="num_semi" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_semiperfecto')" type="button"/>
@@ -100,6 +109,7 @@
                 
                 <div id="num_odioso" class="num_odioso">
 					<div class="input-group mb-3">
+					<label for="numero"><h3>En binario tiene un número impar de unos</h3></label>					
 					<input id="num_odio" type="text" class="form-control" placeholder="número" aria-label="Recipient's username" aria-describedby="basic-addon2">
 						<div class="input-group-append">
 							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_odioso')" type="button"/>

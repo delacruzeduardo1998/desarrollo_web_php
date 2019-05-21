@@ -228,44 +228,48 @@
 			</div>
 			<div id="ver_perfil">
 				<div class="input-group mb-3">
-					<label><h3 id="elements">Nombre</h3></label>
-					<label id="elemento_nombre"></label>
-				</div>	
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Edad</h3></label>
-					<label id="elemento_edad"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Sexo</h3></label>
-					<label id="elemento_sexo"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Color de ojos</h3></label>
-					<label id="elemento_color_ojos"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Peso</h3></label>
-					<label id="elemento_peso"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Estatura</h3></label>
-					<label id="elemento_estatura"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">caracteristicas</h3></label>
-					<label id="elemento_caracteristicas">Ninguna</label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Pasatiempos</h3></label>
-					<label id="elemento_pasatiempos"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements">Porcentaje de igualdad</h3></label>
-					<label id="elemento_porcentaje"></label>
-				</div>
-				<div class="input-group mb-3">
-					<label><h3 id="elements"></h3></label>
-					<label id="elemento_foto"></label>
+					<ul class="actions">
+						<li><label><h3 id="elements">Nombre: </h3></label></li>
+						<li><div id="elemento_nombre"></div></li>
+					</ul>	
+					<ul class="actions">
+						<li><label><h3 id="elements">Edad: </h3></label></li>
+						<li><div id="elemento_edad"></div></li>
+					</ul>	
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Sexo</h3></label></li>
+						<li><div id="elemento_sexo"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Color de ojos</h3></label></li>
+						<li><div id="elemento_color_ojos"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Peso</h3></label></li>
+						<li><div id="elemento_peso"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Estatura</h3></label></li>
+						<li><div id="elemento_estatura"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">caracteristicas</h3></label></li>
+						<li><div id="elemento_caracteristicas">Ninguna</div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Pasatiempos</h3></label></li>
+						<li><div id="elemento_pasatiempos"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements">Porcentaje de igualdad</h3></label></li>
+						<li><div id="elemento_porcentaje"></div></li>
+					</ul>
+					<ul class="actions">
+						<li><label><label><h3 id="elements"></h3></label></li>
+						<li><div id="elemento_foto"></div></li>
+					</ul>
+					
+					
 				</div>
 				<div class="input-group mb-3">
 					<label for="#"></label>

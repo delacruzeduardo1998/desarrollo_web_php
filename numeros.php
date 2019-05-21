@@ -2,10 +2,12 @@
 switch ($_POST["acc"]) {
     case "num_perfect":
         $num=$_POST["num_perfecto"];
+        echo(strval($num)." ");
         num_perfect1($num);
         break;
     case "num_abundante":
         $num=$_POST["num_abundant"];
+        echo(strval($num)." ");
         num_abundante($num);
         break;
     case "num_amigos":
@@ -72,11 +74,11 @@ function num_perfect2($num){
 function num_abundante($num){
     $a=num_perfect2($num);
     if($a>$num){
-        echo("abundante");
+        echo("abundante la suma es ".strval($a));
         return true;
     }
     else {
-        echo("no es abundante");
+        echo("no es abundante la suma es ".strval($a));
         return false;
     }
     
@@ -97,11 +99,11 @@ function num_amigos($num1,$num2){
     $a=num_perfect2($num1);
     $b=num_perfect2($num2);
     if($a==$num2 and $b==$num1){
-        echo("amigos");
+        echo(strval($num1)." y ".strval($num2)." son amigos las sumas son ".strval($a)." y ".strval($b));
         return true;
     }
     else {
-        echo("no es amigos");
+        echo(strval($num1)." y ".strval($num2)." no son amigos las sumas son ".strval($a)." y ".strval($b));
         return false;
     }
     
@@ -111,11 +113,11 @@ function num_amigos($num1,$num2){
 function num_deficiente($num){
     $val=num_abundante2($num);
     if($val){
-        echo(" es un número deficiente");
+        echo(strval($num)." no es un número deficiente");
         return false;
     }
     else {
-        echo("es un número deficiente");
+        echo(strval($num)." es un número deficiente");
         return true;
     }
 }
@@ -156,11 +158,11 @@ function num_palindromo($num){
 
     for($i=0;$i<strlen($cad0);$i++){
         if($cad0[$i] != $cad1[$i]){
-            echo($cad0." no es palindromo");
+            echo(strval($num)." no es palindromo ".$cad0);
             return false;
         }
     }
-    echo($cad0." es palindromo");
+    echo(strval($num)." es palindromo ".$cad0);
     return true;
 }
 # es un numero que o es perfecto pero que la suma de algunos de sus divisores es igual a el mismo
@@ -195,12 +197,19 @@ function num_odioso($num){
         }
     }
     if($total%2==1){
-        echo($num." numero odioso");
+        echo($num." numero odioso ");
+        foreach($bin as $bi){
+            echo($bi);
+        }
         return true;
     }else {
-        echo($num." numero no odioso");
+        echo($num." numero no odioso ");
+        foreach($bin as $bi){
+            echo($bi);
+        }
         return false;
     }
+    
 }
 
 #si se suma los cuadrados de sus digitos y continuamos iterativamente este proceso
@@ -229,13 +238,61 @@ function num_feliz ($num){
 	
 }
 
-#igual al del amigo pero mas de dos
-#12496,14288,15472,14536,14564
-function num_sociable($num){
 
-}
 #es un numero que cumple que al sumar sus propios divisores y despues sumar sus divisores de su propia suma
 #otra vez
 function num_vicioso($num){
+
+}
+function NumsSociables($numa,$numb,$numc,$numd,$nume)
+{
+
+	$num1=sumadivis($numa);
+	$num2=sumadivis($numb);
+	$num3=sumadivis($numc);
+	$num4=sumadivis($numd);
+	$num5=sumadivis($nume);
+
+	echo(strval($num1).",".strval($num2).",".strval($num3).",".strval($num4).",".strval($num5));
+
+	if($num1 == $numb and $num2 == $numc and $num3 == $numd and $num4==$nume and $num5 == $numa){
+		echo " Si son sociables";
+	}
+	else{
+		echo " No son sociables";
+	}
+}
+
+
+
+function NumAmbicioso($numam){
+	echo "//7 NUMERO AMBICIOSO sin el mismo
+//Es un num que cumple que al sumar sus propios divisores y luego sumar los divisores del resultado de la suma y despues los del numero obtenido
+//25 -- divis 1,5 = 6 -->1+2+3=6 SuperPerfecto <br> <br>";
+	//$numam=25;
+
+	$suma=sumadivis($numam);
+
+	$suma2=sumadivis($suma);
+
+	if ($suma2==$suma){
+
+		echo "$suma &&& $suma2";
+		echo "Es ambicioso";
+	}
+	else{
+		echo "$suma &&& $suma2";
+		echo "No es ambicioso ";
+	}
+}
+//funcion recibe de los demas
+function sumadivis($num){
+	$suma=0;
+	for ($i=$num-1; $i>0; $i--){
+		if($num%$i==0){
+			$suma= $suma+$i;
+			}
+	}
+			return $suma;
 
 }
