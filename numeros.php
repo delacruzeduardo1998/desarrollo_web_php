@@ -39,6 +39,14 @@ switch ($_POST["acc"]) {
         $num=$_POST["num_odioso"];
         num_odioso($num);
         break;
+    case "num_sociables":
+        $num1=$_POST["num_soc1"];
+        $num2=$_POST["num_soc2"];
+        $num3=$_POST["num_soc3"];
+        $num4=$_POST["num_soc4"];
+        $num5=$_POST["num_soc5"];
+        num_sociables($num1,$num2,$num3,$num4,$num5);
+        break;
     default:
         echo("Datos invalidos!! php");         
         break;
@@ -244,7 +252,7 @@ function num_feliz ($num){
 function num_vicioso($num){
 
 }
-function NumsSociables($numa,$numb,$numc,$numd,$nume)
+function num_sociables($numa,$numb,$numc,$numd,$nume)
 {
 
 	$num1=sumadivis($numa);
@@ -266,10 +274,7 @@ function NumsSociables($numa,$numb,$numc,$numd,$nume)
 
 
 function NumAmbicioso($numam){
-	echo "//7 NUMERO AMBICIOSO sin el mismo
-//Es un num que cumple que al sumar sus propios divisores y luego sumar los divisores del resultado de la suma y despues los del numero obtenido
-//25 -- divis 1,5 = 6 -->1+2+3=6 SuperPerfecto <br> <br>";
-	//$numam=25;
+	
 
 	$suma=sumadivis($numam);
 

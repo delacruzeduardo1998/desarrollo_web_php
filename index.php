@@ -124,6 +124,7 @@
 										<li><a onclick="mostrar('formula')">Formula</a></li>
 										<li><a onclick="mostrar('criba')">criba</a></li>
 										<li><a onclick="mostrar('primo_primo')">Primo sin primos</a></li>
+										<li><a href="peliculas.php">Peliculas</a></li>
 										<li><a href="indexx.php">Números</a></li>
 										<li><a href="parejas.php">Buscar pareja</a></li>
 									
@@ -146,5 +147,6 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/funciones_primo.js"></script>
 			<script src="assets/js/particles.js"></script>
+			<script src="assets/js/app.js"></script>
 	</body>
 </html>

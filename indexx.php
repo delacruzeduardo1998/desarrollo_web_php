@@ -117,6 +117,20 @@
 					</div>
 				</div>
 
+				<div id="num_sociables" class="num_sociables">
+					<div class="input-group mb-3">
+					<label for="numero"><h3>Números sociables</h3></label>					
+					<input id="num_soc1" type="text" class="form-control" placeholder="número 1" aria-label="Recipient's username" aria-describedby="basic-addon2">
+					<input id="num_soc2" type="text" class="form-control" placeholder="número 2" aria-label="Recipient's username" aria-describedby="basic-addon2">
+					<input id="num_soc3" type="text" class="form-control" placeholder="número 3" aria-label="Recipient's username" aria-describedby="basic-addon2">
+					<input id="num_soc4" type="text" class="form-control" placeholder="número 4" aria-label="Recipient's username" aria-describedby="basic-addon2">
+					<input id="num_soc5" type="text" class="form-control" placeholder="número 5" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<input class="btn btn-outline-secondary" value="verificar"  onclick="accion('num_sociables')" type="button"/>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 
@@ -145,6 +159,8 @@
 										<li><a onclick="mostrar('num_palindromo')">números palindromo</a></li>
 										<li><a onclick="mostrar('num_semiperfecto')">números semiperfecto</a></li>
 										<li><a onclick="mostrar('num_odioso')">números odioso</a></li>
+										<li><a onclick="mostrar('num_sociables')">números sociables</a></li>
+										<li><a href="peliculas.php">Peliculas</a></li>
 										<li><a href="index.php">primos</a></li>
 										<li><a href="parejas.php">Buscar pareja</a></li>
 

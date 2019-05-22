@@ -22,7 +22,8 @@ function ocultar(){
     'num_malvado',
     'num_palindromo',
     'num_semiperfecto',
-    'num_odioso'
+    'num_odioso',
+    'num_sociables'
     
     ];
     lista.forEach(i => {
@@ -38,7 +39,8 @@ function mostrar(div_id){
     'num_malvado',
     'num_palindromo',
     'num_semiperfecto',
-    'num_odioso'
+    'num_odioso',
+    'num_sociables'
     
     ];
     switch (div_id) {
@@ -70,6 +72,9 @@ function mostrar(div_id){
         case 'num_odioso':
             ocultt(lista,'num_odioso');
             break;
+        case 'num_sociables':
+            ocultt(lista,'num_sociables');
+            break;
         default:
             alert("datos incorrectos!! switch");         
             break;
@@ -89,6 +94,11 @@ var param={
     num_palindromo: document.getElementById("num_pali").value,
     num_semiperfecto: document.getElementById("num_semi").value,
     num_odioso: document.getElementById("num_odio").value,
+    num_soc1: document.getElementById("num_soc1").value,
+    num_soc2: document.getElementById("num_soc2").value,
+    num_soc3: document.getElementById("num_soc3").value,
+    num_soc4: document.getElementById("num_soc4").value,
+    num_soc5: document.getElementById("num_soc5").value,
     acc: accionn
 };
     $.ajax({
